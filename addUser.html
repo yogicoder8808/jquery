@@ -1,0 +1,50 @@
+<!-- addUser.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body class="add-user-page">
+    <h1>ADD USER</h1>
+    <form id="add-form" onsubmit="UserDataPage.addUser(event)">
+
+        <div class="input-container">
+            <label for="user-name">Full Name:</label>
+            <input type="text" id="user-name" class="user-input" placeholder="Enter Full Name" onchange="CommonFunctions.validateName(this)" required>
+            <div id="name-error" class="error-msg "></div>
+        </div>
+        
+        <div class="input-container">
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" class="user-input" placeholder="Enter Email ID" onchange="CommonFunctions.validateEmail(this)" required>
+            <div id="email-error" class="error-msg "></div>
+        </div>
+        
+        <div class="input-container">
+            <label for="user-phone">Phone:</label>
+            <input type="tel" id="user-phone" class="user-input" placeholder="Enter Phone Number" onchange="CommonFunctions.validatePhone(this)" required>
+            <div id="phone-error" class="error-msg "></div>
+        </div>
+        
+        <div class="input-container">
+            <label for="user-password">Password:</label>
+            <input type="password" id="user-password" class="user-input" placeholder="Enter Password" onchange="CommonFunctions.validatePassword(this)" minlength="8" required>
+            <span class="box-four">
+                <input type="checkbox" onclick="CommonFunctions.togglePassword('user-password')"> 
+            </span>
+            <div id="password-error" class="password-error-msg "></div>
+        </div>
+        
+        <br>
+        <button class="add-btn" type="submit">Add User</button>
+        <button class="back-btn" type="button" onclick="UserDataPage.goBack()">Go Back</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="common.js"></script>
+    <script src="userData.js"></script>
+</body>
+</html>

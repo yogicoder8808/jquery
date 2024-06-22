@@ -1,0 +1,107 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Register Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">                  
+</head>
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div class="btn-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="loginPageInstance.login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="registerPageInstance.register()">Register</button>
+            </div>
+
+            <h5>Sign in with:</h5>
+
+            <div class="icons">
+                <img src="./images/fb.jfif">
+                <img src="./images/mai.jfif">
+                <img src="./images/twitter.jfif">
+                <img src="./images/git.jfif">
+            </div>
+
+            <h5>(or)</h5>
+
+            <form id="login-form" class="input-group" onsubmit="return loginPageInstance.loginForm(event)">
+
+                <div class="input-container">
+                    <input type="email" class="input-field " placeholder="Enter Email" id="login-email" onchange="loginPageInstance.validateLoginEmail()" required>
+                    <span id="login-email-error" class="data"></span>
+                </div>
+                
+                <div class="input-container">
+                    <input type="password" class="input-field" placeholder="Enter Password" id="login-password" onchange="loginPageInstance.validateLoginPassword()" minlength="8" required >
+                    <div class="show-password">
+                        <input type="checkbox" onclick="CommonFunctions.togglePassword('login-password')"> 
+                    </div>
+                    <span id="login-password-error"></span>
+                </div>
+                
+                
+                <input type="checkbox" class="check-box"> <span class="box-one"> Remember Password</span>
+                <button class="forget-btn">Forgot Password?</button> 
+                <br><br>
+                <div class="input-container">
+                    <button type="submit" class="submit-btn">Log In</button> 
+                    <span id="login-submit-error"></span>
+                </div>
+                
+                <br> <br> 
+                <h6>Not a member? </h6> <button class="register-btn" onclick="registerPageInstance.register()">Register</button>
+            </form>
+
+
+            <form id="register-form" class="input-group register-span" onsubmit="registerPageInstance.registerForm(event)">
+
+                <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Full Name" id="user-name" onchange="CommonFunctions.validateName(this)" required>
+                    <span id="name-error"></span>
+                </div>
+                
+                <div class="input-container">
+                    <input type="email" class="input-field" placeholder="Email" id="user-email" onchange="CommonFunctions.validateEmail(this)" required>
+                    <span id="email-error"></span>
+                </div>
+                
+                <div class="input-container">
+                    <input type="tel" class="input-field" placeholder="Phone Number" id="user-phone" onchange="CommonFunctions.validatePhone(this)" required>
+                    <span id="phone-error"></span>
+                </div>
+                
+                <div class="input-container">
+                    <input type="password" class="input-field" placeholder="Enter Password" id="user-password" onchange="CommonFunctions.validatePassword(this)" minlength="8" required >
+                    <div class="show-password" >
+                        <input type="checkbox" onclick="CommonFunctions.togglePassword('user-password')"> 
+                    </div>
+                    <span id="password-error"></span>
+                </div>
+                
+                <div class="input-container">
+                    <input type="password" class="input-field" placeholder="Confirm Password" id="user-confirm-password" onchange="CommonFunctions.validateConfirmPassword(this)" minlength="8" required>
+                    <div class="show-password">
+                        <input type="checkbox" onclick="CommonFunctions.togglePassword('user-confirm-password')"> 
+                    </div>
+                    <span id="confirm-password-error"></span>
+                </div>
+                
+                <input type="checkbox" class="check-box" id="checkbox-term" required> <span id="checkbox-error" class="box-two"> I agree to the terms & conditions</span>
+                
+                <div class="input-container">
+                    <button type="submit" class="submit-btn">Register</button>
+                    <span id="submit-error"></span>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="common.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>  
+</body>
+</html>

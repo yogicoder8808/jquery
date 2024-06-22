@@ -1,0 +1,432 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.main{
+    height: 150vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(237, 248, 236, 0.635), rgba(237, 248, 236, 0.635)), url(./images/bg6.jfif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box{
+    width: 354px;
+    height: 600px;
+    background-color: #fff;
+    position: relative;
+    margin: 6% auto;
+    padding: 3%;
+    overflow: hidden;
+}
+
+h5{
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+}
+
+.btn-box{
+    width: 220px;
+    margin: 25px auto;
+    position: relative;
+    box-shadow: 0 0 20px 5px rgb(237, 241, 237);
+    border-radius: 30px;
+}
+
+
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    border: 0;
+    outline: none;
+}
+
+.toggle-btn:hover{
+    color: rgb(28, 28, 234);
+
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-color: aquamarine;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.icons{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.icons img{
+    width: 25px;
+    margin: 0 12px;
+    cursor: pointer;
+    
+}
+
+.input-group{
+    top: 10px;
+    position: relative;
+    width: 280px;
+    transition: .5s;
+    display: inline-block;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.input-group span{
+    top: 43.5%;
+    color: #777;
+    font-size: 12px;
+    position: absolute;
+}
+
+.register-span span{
+    top: 77%;
+    color: #777;
+    font-size: 12px;
+    position: absolute;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid  #999;
+    outline: none;
+    background: transparent;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: aquamarine;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.submit-btn:hover{
+    color: rgb(28, 28, 234);
+}
+
+.check-box{
+    margin: 30px 10px 30px 0px;
+}
+
+/* login & register checkbox */
+.box-one{
+    margin-top: 7px;
+}
+.box-two{
+    margin-top: 3px;
+}
+
+/* Edit & Add checkbox */
+.box-three, .box-four{
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 430px;
+}
+
+.forget-btn{
+    position: absolute;
+    margin: 30px 10px 30px 149px;
+    font-size: 12px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(28, 28, 234);;
+
+}
+
+.forget-btn:hover{
+    color: black;
+}
+
+
+h6{
+    color: #777;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.register-btn{
+    position: absolute;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 4px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(28, 28, 234);;
+}
+
+.register-btn:hover{
+    color: black;
+}
+
+#login-form{
+    left: 20px;
+   
+}
+
+#register-form{
+    left: 450px;
+    top: -50%;
+}
+
+@media(max-width:700px){
+    #register{
+       top: -50%;
+    }
+}
+
+/* JavaScript */
+
+.input-container span{
+    color: red;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+
+.fa-check-circle {
+    color: seagreen;
+    position: relative; 
+    top: -30px;
+    margin-left: 285px;
+}
+
+.edit-user-page .fa-check-circle, .add-user-page .fa-check-circle{
+    color: seagreen;
+    position: relative; 
+    top: -30px;
+    margin-left: 410px;
+}
+
+.fa-info-circle {
+    color: red; 
+    margin-right: 5px; 
+    cursor: pointer; 
+}
+
+.fa-info-circle:hover {
+    color: darkred; 
+}
+
+
+
+/* Password toggle btn*/
+
+.show-password {
+    position: absolute;
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+
+/* --------UserData Table---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.7;
+    color: #333;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: aquamarine;
+}
+
+#userData tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* AddUser and Logout btn */
+
+.add-user-btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    color: rgb(40, 202, 40);
+    border: 1px solid gray;
+    margin-left: 85%;
+    font-weight: 600;
+}
+
+.logout-btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    color: red;
+    border: 1px solid gray;
+    font-weight: 600;
+}
+
+.add-user-btn:hover{
+    background-color: rgb(40, 202, 40);  
+    color: white;
+}
+
+.logout-btn:hover{
+    background-color: red;  
+    color: white;
+}
+
+/* Edit & Add Form */
+
+#edit-form, #add-form{
+    max-width: 400px;
+    margin: 40px auto;
+
+}
+.user-input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.user-input:hover {
+    background-color: #f5f5f5;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.save-btn,.add-btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #3498db; 
+    color: #fff;
+    border: 1px solid #2980b9;
+}
+
+.cancel-btn,.back-btn{
+    padding: 5px;
+    background-color: #e74c3c; 
+    color: #fff;
+    border: 1px solid #c0392b;
+}
+
+.save-btn:hover,.add-btn:hover{
+    background-color:blue;
+}
+    
+.cancel-btn:hover, .back-btn:hover{
+    background-color: red;  
+}
+
+.error-msg{
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+.password-error-msg{
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+/* Edit and Delete button */
+
+.edit-btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #3498db; 
+    color: #fff;
+    border: 1px solid #2980b9;
+}
+
+.delete-btn{
+    padding: 5px;
+    background-color: #e74c3c; 
+    color: #fff;
+    border: 1px solid #c0392b;
+}
+
+.edit-btn:hover{
+    background-color:blue;
+}
+    
+.delete-btn:hover{
+    background-color: red; 
+}
+

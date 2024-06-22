@@ -1,0 +1,32 @@
+<!-- userData.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stored User Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>STORED USER DATA</h1>
+    <button class="add-user-btn" onclick="UserDataPage.navigateToAddUser()">Add User</button>
+    <button class="logout-btn" onclick="UserDataPage.logout()">Logout</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userData">
+            <!-- User data will be dynamically added here -->
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="common.js"></script>
+    <script src="userData.js"></script>
+</body>
+</html>
